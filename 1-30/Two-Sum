@@ -1,0 +1,9 @@
+def twoSum(nums, target):
+    seen = {}
+    for i in range(len(nums)):
+        current_num = nums[i]
+        needed_num = target - current_num
+        
+        if needed_num in seen:
+            return [seen[needed_num], i] 
+        seen[current_num] = i
